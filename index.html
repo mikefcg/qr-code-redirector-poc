@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Redirector</title>
+  <style>
+    .text-container {
+      text-align: center;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    function detectOS() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(userAgent)) {
+        return 'Android';
+      } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+        return 'iOS';
+      } else {
+        return 'Other';
+      }
+    }
+
+    function redirectToWebsite() {
+      const os = detectOS();
+      let redirectURL = '';
+
+      if (os === 'Android') {
+        redirectURL = 'https://play.google.com/store/apps/?hl=en&gl=US';
+      } else if (os === 'iOS') {
+        redirectURL = 'https://www.apple.com/ph/app-store/';
+      } else {
+        redirectURL = 'https://www.flightcentre.com';
+      }
+
+      document.getElementById('osInfo').innerText = 'Detected OS: ' + os;
+      setTimeout(function () {
+        window.location.href = redirectURL;
+      }, 500);
+    }
+
+    window.onload = redirectToWebsite;
+  </script>
+</head>
+
+<body>
+  <div class="text-container">
+    <h1>Redirecting...</h1>
+    <p id="osInfo" class="text">Detecting your device's operating system...</p>
+  </div>
+</body>
+
+</html>
