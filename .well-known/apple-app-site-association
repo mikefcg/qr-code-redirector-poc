@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+           {
+             "appID": "E55FWA3393.au.com.flightcentre.Flight-Centre.dev",
+             "paths": [ "/qr-code-redirector-poc/*" ]
+           }
+       ]
+   }
+}
