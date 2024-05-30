@@ -1,11 +1,13 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
-      "package_name": "au.com.flightcentre.dev",
+      "package_name": "au.com.flightcentre.staging",
       "sha256_cert_fingerprints": [
-        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
+        "DC:96:4B:7D:86:BB:9E:CB:03:09:85:4A:C4:65:D9:11:1D:93:2C:97:2C:F2:AD:A5:18:18:0A:6E:FA:B6:FE:E2"
       ]
     }
   }
